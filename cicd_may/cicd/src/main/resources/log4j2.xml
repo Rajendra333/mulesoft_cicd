@@ -11,7 +11,8 @@
 		<RollingFile name="file"
 			fileName="${sys:mule.home}${sys:file.separator}logs${sys:file.separator}cicd.log"
 			filePattern="${sys:mule.home}${sys:file.separator}logs${sys:file.separator}cicd-%i.log">
-			<PatternLayout pattern="%-5p %d [%t] [event: %X{correlationId}] %c: %m%n" />
+			<PatternLayout
+				pattern="%-5p %d [%t] [event: %X{correlationId}] %c: %m%n" />
 			<SizeBasedTriggeringPolicy size="10 MB" />
 			<DefaultRolloverStrategy max="10" />
 		</RollingFile>
